@@ -1,0 +1,71 @@
+@import "scss/Blogs.scss";
+
+$header-color: #2b2b2b;
+
+header {
+	background-color: $header-color;
+	box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+
+	nav > a {
+		color: white;
+	}
+	.navbar-nav {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+h1 {
+	color: #004E92;
+}
+
+html {
+	font-size: 14px;
+	font-family: sans-serif;
+}
+
+li {
+	list-style-type: disclosure-closed;
+}
+
+@media (min-width: 768px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	/* Margin bottom by footer height */
+	margin-bottom: 60px;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	white-space: nowrap;
+	line-height: 60px; /* Vertically center the text there */
+}
+
+#user-icon {
+	height: 3rem;
+	border-radius: 2rem;
+	//width: 3rem;
+}
+
+#header-icon {
+	height: 3rem;
+	border-radius: 2rem;
+}
+
+.blog-tag {
+	background-color: #f2f2f2;
+	color: #557db2;
+}

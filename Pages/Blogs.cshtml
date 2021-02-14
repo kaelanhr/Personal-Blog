@@ -1,0 +1,23 @@
+@page
+@model BlogWebsite.Pages.BlogListModel
+
+@{
+	ViewData["Title"] = "Blogs";
+}
+
+@*<input type="text" placeholder="Search Blogs..." />*@
+@foreach (var blog in Model.Blogs)
+{
+	<section>
+	 <img src="/Images/Blogs/@blog.Path/thumbnail.jpg" class="thumbnail" />
+	 <h2><a class="nav-link text-dark" href="/BlogPost/@blog.Path">@blog.Title</a></h2>
+	 <span>@blog.Published.ToString("dd/MM/yyyy")</span>
+	 <span>@blog.LastEdited.ToString("dd/MM/yyyy")</span>
+	 <span>@blog.Blurb</span>
+
+	 @foreach (var tag in blog.Tags)
+		{
+		 <span class="blog-tag">@tag</span>
+		}
+	</section>
+}
