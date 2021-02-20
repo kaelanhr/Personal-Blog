@@ -4,7 +4,7 @@ $header-color: #2b2b2b;
 
 header {
 	background-color: $header-color;
-	box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+	box-shadow: 0 0.55rem 0.75rem rgba(0, 0, 0, 0.05);
 
 	nav > a {
 		color: white;
@@ -37,6 +37,7 @@ li {
 
 main {
 	width: 80%;
+	margin-bottom: 3rem;
 }
 
 .container {
@@ -68,7 +69,9 @@ body {
 	background-color: #f4f4f4;
 }
 
-.footer {
+footer {
+	background-color: #2b2b2b;
+	color: white;
 	position: absolute;
 	bottom: 0;
 	width: 100%;

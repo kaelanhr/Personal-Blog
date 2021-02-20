@@ -1,21 +1,50 @@
 .thumbnail {
-	height: 20rem;
-	width: 30rem;
+	height: 15rem;
+	width: 100%;
 }
 
-.blog-list-item {
-	display: flex;
-	background-color: #ffffff;
-
-	.tags {
-		display: block;
-		.blog-tag {
-			background-color: #f2f2f2;
-			color: #557db2;
-		}
+.blog-header {
+	background-color: #131b44;
+	margin: 0;
+	width: 100%;
+	height: 9rem;
+	display: inline-block;
+	span,
+	h2 {
+		color: white;
+		padding-left: 15%;
 	}
+}
 
-	.blog-description {
-		padding-left: 1rem;
+.blog-list {
+	display: grid;
+	grid-template-columns: 50% 50%;
+
+	.blog-list-item {
+		margin-left: 2.5rem;
+		margin-top: 2.5rem;
+		background-color: #ffffff;
+		display: grid;
+		grid-template-columns: 45% 55%;
+
+		.blog-description {
+			padding-left: 1rem;
+			position: relative;
+			.tags-wrapper {
+				position: absolute;
+				bottom: 0;
+				margin-bottom: 0.5rem;
+				.tags {
+					display: block;
+					.blog-tag {
+						background-color: #f2f2f2;
+						color: #557db2;
+					}
+				}
+			}
+			.blog-metadata {
+				font-style: italic;
+			}
+		}
 	}
 }

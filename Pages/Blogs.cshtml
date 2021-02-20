@@ -6,24 +6,34 @@
 }
 
 @*<input type="text" placeholder="Search Blogs..." />*@
-@foreach (var blog in Model.Blogs)
-{
-	<section class="blog-list-item">
-	 <img src="/Images/Blogs/@blog.Path/thumbnail.jpg" class="thumbnail" />
-	 <section class="blog-description">
-	  <h2><a class="nav-link text-dark" href="/BlogPost/@blog.Path">@blog.Title</a></h2>
-	  <section class="">
-	   <span>@blog.Published.ToString("dd/MM/yyyy") | @blog.Length minutes</span>
-	   @* <span>@blog.LastEdited.ToString("dd/MM/yyyy")</span> *@
-	  </section>
-	  <span>@blog.Blurb</span>
+<section class="blog-header">
+ <h2>Kaelan Reece Blog</h2>
+ <span>Tech, Games, Modding</span>
+</section>
+<section class="blog-list">
+ @foreach (var blog in Model.Blogs)
+	{
+	 <section class="blog-list-item">
+	   <img src="/Images/Blogs/@blog.Path/thumbnail.jpg" class="thumbnail" />
+	  <section class="blog-description">
+	   <section>
+		<h2><a class="nav-link text-dark" href="/BlogPost/@blog.Path">@blog.Title</a></h2>
+	   </section>
+	   <section class="blog-metadata">
+		<span>@blog.Published.ToString("dd/MM/yyyy") | @blog.Length minutes</span>
+		@* <span>@blog.LastEdited.ToString("dd/MM/yyyy")</span> *@
+	   </section>
+	   <span>@blog.Blurb</span>
 
-	  <section class="tags">
-	   @foreach (var tag in blog.Tags)
-				{
-		   <span class="blog-tag">@tag</span>
-				}
+	   <section class="tags-wrapper">
+		<section class="tags">
+		 @foreach (var tag in blog.Tags)
+						{
+			 <span class="blog-tag">@tag</span>
+						}
+		</section>
+	   </section>
 	  </section>
 	 </section>
-	</section>
-}
+	}
+</section>
