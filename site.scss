@@ -17,7 +17,7 @@ header {
 }
 
 h1 {
-	color: #004E92;
+	color: #004e92;
 }
 
 html {
@@ -35,6 +35,27 @@ li {
 	}
 }
 
+main {
+	width: 80%;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+
+article {
+	background-color: #ffffff;
+	padding: 1rem;
+
+	h1 {
+		text-align: center;
+	}
+}
+
 html {
 	position: relative;
 	min-height: 100%;
@@ -44,6 +65,7 @@ body {
 	margin: 0;
 	/* Margin bottom by footer height */
 	margin-bottom: 60px;
+	background-color: #f4f4f4;
 }
 
 .footer {
@@ -63,9 +85,4 @@ body {
 #header-icon {
 	height: 3rem;
 	border-radius: 2rem;
-}
-
-.blog-tag {
-	background-color: #f2f2f2;
-	color: #557db2;
 }

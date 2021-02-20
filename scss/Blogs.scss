@@ -2,3 +2,20 @@
 	height: 20rem;
 	width: 30rem;
 }
+
+.blog-list-item {
+	display: flex;
+	background-color: #ffffff;
+
+	.tags {
+		display: block;
+		.blog-tag {
+			background-color: #f2f2f2;
+			color: #557db2;
+		}
+	}
+
+	.blog-description {
+		padding-left: 1rem;
+	}
+}
