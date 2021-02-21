@@ -9,6 +9,7 @@
 	width: 100%;
 	height: 9rem;
 	display: inline-block;
+
 	span,
 	h2 {
 		color: white;
@@ -30,18 +31,23 @@
 		.blog-description {
 			padding-left: 1rem;
 			position: relative;
+
 			.tags-wrapper {
 				position: absolute;
 				bottom: 0;
 				margin-bottom: 0.5rem;
+
 				.tags {
 					display: block;
+
 					.blog-tag {
+						padding: 0.25rem;
 						background-color: #f2f2f2;
 						color: #557db2;
 					}
 				}
 			}
+
 			.blog-metadata {
 				font-style: italic;
 			}

@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using Markdig;
 using YamlDotNet.Core;
@@ -30,12 +31,19 @@ namespace BlogWebsite.Helper
 			// read the input and extract the yaml front matter into an object.
 			using (var reader = new StringReader(Input))
 			{
-				var parser = new Parser(reader);
-				parser.Consume<StreamStart>();
-				parser.Consume<DocumentStart>();
-				var content = yamlDeserializer.Deserialize<T>(parser);
-				parser.Consume<DocumentEnd>();
-				Doc.YamlData = content;
+				try
+				{
+					var parser = new Parser(reader);
+					parser.Consume<StreamStart>();
+					parser.Consume<DocumentStart>();
+					var content = yamlDeserializer.Deserialize<T>(parser);
+					parser.Consume<DocumentEnd>();
+					Doc.YamlData = content;
+				}
+				catch (YamlException e)
+				{
+					Console.WriteLine(e.Message);
+				}
 			}
 			return this;
 		}
