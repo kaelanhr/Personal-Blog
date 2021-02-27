@@ -1,4 +1,5 @@
 @import "scss/Colors.scss";
+@import "scss/Animations.scss";
 
 #blog-list-wrapper {
 	margin-bottom: 3rem;
@@ -26,6 +27,8 @@
 .blog-list {
 	display: grid;
 	grid-template-columns: 50% 50%;
+	animation: fadeIn ease 2s;
+	-webkit-animation: fadeIn ease 2s;
 
 	.blog-list-item {
 		margin-left: 2.5rem;
@@ -42,7 +45,7 @@
 				color: $Blue;
 				text-decoration: none;
 
-				&:hover{
+				&:hover {
 					text-decoration: underline;
 				}
 			}
