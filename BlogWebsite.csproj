@@ -10,8 +10,8 @@
 	</ItemGroup>
 	<ItemGroup>
 		<Folder Include="wwwroot\Assets\" />
-		<Watch Include="scss/*.scss" />
+		<Watch Include="Content/**/*.md" />
+		<Watch Include="scss/**" />
 		<Watch Include="*.scss" />
-		<Watch Include="*.md" />
 	</ItemGroup>
 </Project>
