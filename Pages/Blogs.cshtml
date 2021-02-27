@@ -16,7 +16,7 @@
 		{
 			<section class="blog-list-item">
 				<a class="nav-link text-dark" href="/BlogPost/@blog.Path">
-					<img src="/Images/Blogs/@blog.Path/thumbnail.jpg" class="thumbnail" />
+					<img src="/Images/Blogs/@blog.Path/thumbnail.png" class="thumbnail" />
 				</a>
 				<section class="blog-description">
 					<section>
@@ -32,8 +32,10 @@
 						<section class="tags">
 							@foreach (var tag in blog.Tags)
 							{
-								<a href="?search=@tag.Replace(' ', '+').ToLower()">
-									<span class="blog-tag">@tag</span>
+								<a href="?search=@tag.Replace(' ', '+').ToLower()" class="blog-tag">
+									<span class="blog-tag">
+										@tag
+									</span>
 								</a>
 							}
 						</section>
