@@ -3,9 +3,10 @@
 @import "scss/Shared/Header.scss";
 @import "scss/Shared/Nav.scss";
 @import "scss/Colors.scss";
+@import "scss/Variables.scss";
 
 h1,
-h2 {
+h2, h3 {
 	color: $Blue;
 }
 
@@ -24,7 +25,9 @@ li {
 	}
 }
 
-
+main {
+		margin-top: $NavbarHeight;
+}
 
 .container {
 	display: flex;

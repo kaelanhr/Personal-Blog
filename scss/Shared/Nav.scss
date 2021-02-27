@@ -1,6 +1,8 @@
+@import "scss/Variables.scss";
+
 .nav-wrapper {
 	display: flex;
-	height: $header-height;
+	height: $NavbarHeight;
 }
 
 nav {
