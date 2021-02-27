@@ -10,10 +10,33 @@
 .blog-body {
 	width: 80%;
 	background-color: #ffffff;
-	padding: 1rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	padding-left: 4rem;
+	padding-right: 4rem;
 }
 
 .thumbnail {
 	height: 15rem;
 	width: 100%;
+	opacity: 0.85;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.blog-details {
+	display: flex;
+	margin-top: 1rem;
+	p {
+		font-style: italic;
+		padding-left: 1rem;
+	}
+}
+
+.blog-header-image {
+	width: 80%;
+	display: block;
+	margin: auto;
 }

@@ -8,15 +8,21 @@
 <article>
 	<section class="blog-body-container">
 		<section class="blog-body">
-			<h1>@Html.DisplayFor(model => model.Blog.Title)</h1>
-			<p>@Model.Blog.Blurb</p>
+			<section class="blog-info">
+				<section class="blog-title">
+					<h1>@Html.DisplayFor(model => model.Blog.Title)</h1>
+				</section>
+				<section class="blog-details">
 
-			<img src="/Images/portrait.jpg" id="user-icon" alt="User Icon" />
-			<p>
-				By Kaelan Reece | Published on @Model.Blog.Published.ToString("MMMM dd, yyyy") | @Model.Blog.Length
-				minutes
-			</p>
-			<img src="/Images/Blogs/@Model.Blog.Path/header.jpg" />
+					<img src="/Images/portrait.jpg" id="user-icon" alt="User Icon" />
+					<p>
+						By Kaelan Reece | Published on @Model.Blog.Published.ToString("MMMM dd, yyyy") | @Model.Blog.Length
+						min read
+					</p>
+				</section>
+				<p>@Model.Blog.Blurb</p>
+			</section>
+			<img src="/Images/Blogs/@Model.Blog.Path/header.jpg" class="blog-header-image" />
 
 			@Html.Raw(Model.Blog.Content)
 
