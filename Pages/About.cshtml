@@ -5,5 +5,9 @@
 }
 
 <article>
-	@Html.Raw(Model.AboutContent)
+	<section class="blog-body-container">
+		<section class="blog-body">
+			@Html.Raw(Model.AboutContent)
+		</section>
+	</section>
 </article>

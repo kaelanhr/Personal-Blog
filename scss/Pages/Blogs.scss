@@ -1,0 +1,19 @@
+.blog-body-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+
+.blog-body {
+	width: 80%;
+	background-color: #ffffff;
+	padding: 1rem;
+}
+
+.thumbnail {
+	height: 15rem;
+	width: 100%;
+}

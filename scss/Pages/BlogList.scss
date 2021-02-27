@@ -1,20 +1,14 @@
-.thumbnail {
-	height: 15rem;
-	width: 100%;
+#blog-list-wrapper {
+	margin-bottom: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
 }
 
-.blog-header {
-	background-color: #131b44;
-	margin: 0;
+#blog-list-header {
 	width: 100%;
-	height: 9rem;
-	display: inline-block;
-	margin-top: 4rem;
-	span,
-	h2 {
-		color: white;
-		padding-left: 15%;
-	}
 }
 
 .blog-list {
@@ -52,5 +46,19 @@
 				font-style: italic;
 			}
 		}
+	}
+}
+
+.blog-header {
+	background-color: #131b44;
+	margin: 0;
+	width: 100%;
+	height: 9rem;
+	display: inline-block;
+	margin-top: 4rem;
+	span,
+	h2 {
+		color: white;
+		padding-left: 15%;
 	}
 }
