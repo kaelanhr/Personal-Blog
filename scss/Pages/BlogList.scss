@@ -30,6 +30,22 @@
 	color: #557db2;
 }
 
+.blog-search {
+	display: flex;
+	justify-content: center;
+
+	margin-top: 3rem;
+
+	input[type="text"] {
+		padding: 0.5rem 0.5rem;
+		width: 20rem;
+		display: inline-block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+	}
+}
+
 .blog-list {
 	display: grid;
 	grid-template-columns: 50% 50%;

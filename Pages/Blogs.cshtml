@@ -1,3 +1,4 @@
+@*@page "{search?}"*@
 @page
 @model BlogWebsite.Pages.BlogListModel
 
@@ -5,9 +6,31 @@
 	ViewData["Title"] = "Blogs";
 }
 
-@*<input type="text" placeholder="Search Blogs..." />*@
 <section id="blog-list-header">
 	<h2>Kaelan Reece Blog</h2>
 	<span>Tech, Games, Modding</span>
 </section>
-<component type="typeof(Components.BlogList)" render-mode="Static" param-blogs="@Model.Blogs" />
+@*<input type="text" placeholder="Search Blogs..." />*@
+
+@if (Model.SearchString != null)
+{
+	<section class="container">
+		<h1>Results for '@Model.SearchString'</h1>
+	</section>
+}
+
+<form class="blog-search">
+	<input type="text" asp-for="SearchString" placeholder="Search Blogs..." />
+	<input type="submit" value="Search" />
+</form>
+
+@if (Model.Blogs.Count() > 0)
+{
+	<component type="typeof(Components.BlogList)" render-mode="Static" param-blogs="@Model.Blogs" />
+}
+else
+{
+	<section class="container">
+		<h2>No Blogs Found</h2>
+	</section>
+}
