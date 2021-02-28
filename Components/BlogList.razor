@@ -1,0 +1,42 @@
+﻿@using BlogWebsite.Models;
+
+<section id="blog-list-wrapper">
+	<section class="blog-list">
+		@foreach (var blog in Blogs)
+		{
+			<section class="blog-list-item">
+				<a class="nav-link text-dark" href="/BlogPost/@blog.Path">
+					<img src="/Images/Blogs/@blog.Path/thumbnail.png" class="thumbnail" />
+				</a>
+				<section class="blog-description">
+					<section>
+						<h2><a class="nav-link text-dark" href="/BlogPost/@blog.Path">@blog.Title</a></h2>
+					</section>
+					<section class="blog-metadata">
+						<span>@blog.Published.ToString("dd/MM/yyyy") | @blog.Length minutes</span>
+						@* <span>@blog.LastEdited.ToString("dd/MM/yyyy")</span> *@
+					</section>
+					<span>@blog.Blurb</span>
+
+					<section class="tags-wrapper">
+						<section class="tags">
+							@foreach (var tag in blog.Tags)
+							{
+								<a href="?search=@tag.Replace(' ', '+').ToLower()" class="blog-tag">
+									<span class="blog-tag">
+										@tag
+									</span>
+								</a>
+							}
+						</section>
+					</section>
+				</section>
+			</section>
+		}
+	</section>
+</section>
+
+@code {
+	[Parameter]
+	public IEnumerable<BlogPost> Blogs { get; set; }
+}

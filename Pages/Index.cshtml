@@ -3,8 +3,9 @@
 @{
 	ViewData["Title"] = "Home";
 }
+@using BlogWebsite.Models;
 
-<div class="text-center">
-	<h1 class="display-4">Recent Posts</h1>
-
-</div>
+<section id="blog-list-header">
+	<h1>Recent Posts</h1>
+</section>
+<component type="typeof(Components.BlogList)" render-mode="Static" param-blogs="@Model.Blogs" />
