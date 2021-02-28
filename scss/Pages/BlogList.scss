@@ -35,14 +35,15 @@
 	grid-template-columns: 50% 50%;
 	animation: fadeIn ease 2s;
 	-webkit-animation: fadeIn ease 2s;
-
+	width: 80%;
 	.blog-list-item {
 		margin-left: 2.5rem;
 		margin-top: 2.5rem;
 		background-color: #ffffff;
 		display: grid;
 		grid-template-columns: 45% 55%;
-
+		box-shadow: 0 0.25rem 0.5rem rgba(0.05, 0.05, 0.05, 0.15),
+			0 0.25rem 0.5rem rgba(0.05, 0.05, 0.05, 0.23);
 		.blog-description {
 			padding-left: 1rem;
 			position: relative;
