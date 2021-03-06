@@ -1,0 +1,28 @@
+version: "3.3"
+services:
+  server:
+    # restart: always
+    build: .
+    ports:
+      - "5000"
+      - "5001"
+    networks:
+      - bridge
+    volumes:
+      - ./Content:/app/Content
+      - ./Content/Blogs/Assets:/app/wwwroot/Images/Blogs
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - bridge
+    depends_on:
+      - server
+networks:
+  bridge:
+volumes:
+  Content:
