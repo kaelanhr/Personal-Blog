@@ -1,4 +1,4 @@
-﻿@using BlogWebsite.Models;
+﻿@using PersonalBlog.Models;
 
 <section id="blog-list-wrapper">
 	<section class="blog-list">
@@ -22,7 +22,7 @@
 						<section class="tags">
 							@foreach (var tag in blog.Tags)
 							{
-								<a href="?search=@tag.Replace(' ', '+').ToLower()" class="blog-tag">
+								<a href="?searchString=@tag.Replace(' ', '+').ToLower()" class="blog-tag">
 									<span class="blog-tag">
 										@tag
 									</span>

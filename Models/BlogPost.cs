@@ -1,6 +1,6 @@
 using System;
 
-namespace BlogWebsite.Models
+namespace PersonalBlog.Models
 {
 	/// <summary>
 	/// A single blog post contains both the content of the article
@@ -23,7 +23,7 @@ namespace BlogWebsite.Models
 
 		// the html content of the blog post.
 		public string Content { get; set; }
-		
+
 		// a brief summary of the article.
 		public string Blurb { get; set; }
 

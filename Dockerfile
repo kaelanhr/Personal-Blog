@@ -32,4 +32,4 @@ EXPOSE 443
 EXPOSE 5000/tcp
 ENV ASPNETCORE_URLS http://*:5000
 COPY --from=build-server /app/Server/bin/Release/net5.0/publish .
-ENTRYPOINT [ "dotnet", "BlogWebsite.dll" ]
+ENTRYPOINT [ "dotnet", "PersonalBlog.dll" ]

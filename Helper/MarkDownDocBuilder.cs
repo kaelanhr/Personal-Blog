@@ -6,7 +6,7 @@ using YamlDotNet.Core.Events;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
-namespace BlogWebsite.Helper
+namespace PersonalBlog.Helper
 {
 	public class MarkDownDocBuilder<T>
 	{

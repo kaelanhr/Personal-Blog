@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using BlogWebsite.Models;
+using PersonalBlog.Models;
 
-namespace BlogWebsite.Services
+namespace PersonalBlog.Services
 {
 	public interface IBlogService
 	{

@@ -3,12 +3,12 @@ using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
-using BlogWebsite.Models;
-using BlogWebsite.Services;
+using PersonalBlog.Models;
+using PersonalBlog.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace BlogWebsite.Pages
+namespace PersonalBlog.Pages
 {
 	public class BlogListModel : PageModel
 	{
@@ -32,7 +32,6 @@ namespace BlogWebsite.Pages
 			{
 				CultureInfo culture = new CultureInfo("en-AU");
 				var stdSearch = SearchString.Replace("+", " ");
-
 
 				// whether the string is contained in either the title or in one of the tags.
 				blogList = blogList

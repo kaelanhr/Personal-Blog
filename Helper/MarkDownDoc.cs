@@ -1,4 +1,4 @@
-namespace BlogWebsite.Helper
+namespace PersonalBlog.Helper
 {
 	public class MarkDownDoc<T>
 	{

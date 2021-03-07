@@ -1,10 +1,10 @@
 using System.Threading.Tasks;
-using BlogWebsite.Helper;
-using BlogWebsite.Models;
+using PersonalBlog.Helper;
+using PersonalBlog.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace BlogWebsite.Pages
+namespace PersonalBlog.Pages
 {
 	public class BlogModel : PageModel
 	{

@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using BlogWebsite.Helper;
+using PersonalBlog.Helper;
 
-namespace BlogWebsite.Pages
+namespace PersonalBlog.Pages
 {
 	public class AboutModel : PageModel
 	{

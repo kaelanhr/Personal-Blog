@@ -2,14 +2,14 @@
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using BlogWebsite.Helper;
-using BlogWebsite.Models;
-using BlogWebsite.Services;
+using PersonalBlog.Helper;
+using PersonalBlog.Models;
+using PersonalBlog.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace BlogWebsite.Pages
+namespace PersonalBlog.Pages
 {
 	public class IndexModel : PageModel
 	{

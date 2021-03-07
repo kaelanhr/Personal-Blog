@@ -1,11 +1,11 @@
-using BlogWebsite.Services;
+using PersonalBlog.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace BlogWebsite
+namespace PersonalBlog
 {
 	public class Startup
 	{

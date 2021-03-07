@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
-using BlogWebsite.Helper;
-using BlogWebsite.Models;
+using PersonalBlog.Helper;
+using PersonalBlog.Models;
 
-namespace BlogWebsite.Services
+namespace PersonalBlog.Services
 {
 	public class BlogService : IBlogService
 	{

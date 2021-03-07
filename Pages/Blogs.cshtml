@@ -1,6 +1,6 @@
 @*@page "{search?}"*@
 @page
-@model BlogWebsite.Pages.BlogListModel
+@model PersonalBlog.Pages.BlogListModel
 
 @{
 	ViewData["Title"] = "Blogs";
@@ -10,7 +10,6 @@
 	<h2>Kaelan Reece Blog</h2>
 	<span>Tech, Games, Modding</span>
 </section>
-@*<input type="text" placeholder="Search Blogs..." />*@
 
 @if (Model.SearchString != null)
 {
