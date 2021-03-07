@@ -10,7 +10,8 @@ services:
       - bridge
     volumes:
     # link the content repo and blog images in the host to the container.
-      - ./Content:/app/Content
+      - ./Content/Blogs:/app/Content/Blogs
+      - ./Content/Personal:/app/Content/Personal
       - ./Content/Blogs/Assets:/app/wwwroot/Images/Blogs
   nginx:
     image: nginx:latest
