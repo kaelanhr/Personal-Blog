@@ -1,4 +1,3 @@
-@*@page "{search?}"*@
 @page
 @model PersonalBlog.Pages.BlogListModel
 
@@ -6,14 +5,13 @@
 	ViewData["Title"] = "Blogs";
 }
 @section Header{
-<section id="blog-list-header">
-	<h2>Kaelan Reece Blog</h2>
-	<span>Tech, Games, Modding</span>
-</section>
-<section class="nav-background">
-</section>
+	<section id="blog-list-header">
+		<h2>Kaelan Reece Blog</h2>
+		<span>Tech, Games, Modding</span>
+	</section>
+	<section class="nav-background">
+	</section>
 }
-
 
 @if (Model.SearchString != null)
 {
@@ -27,10 +25,17 @@
 	<input type="submit" value="Search" />
 </form>
 
+@{
+	var SearchPart = (Model.SearchString != null ? ($"&searchString={Model.SearchString}") : "");
+}
+
 @if (Model.Blogs.Count() > 0)
 {
 	<component type="typeof(Components.BlogList)" render-mode="Static" param-blogs="@Model.Blogs" />
+	<a href="?pageNum=@(Model.PageNum - 1 < 1 ? Model.PageNum : Model.PageNum - 1)@(SearchPart)">Previous</a>
+	<a href="?pageNum=@(Model.PageNum + 1 > Model.TotalPages ? Model.PageNum : Model.PageNum + 1)@(SearchPart)">Next</a>
 }
+
 else
 {
 	<section class="container">

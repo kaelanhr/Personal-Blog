@@ -17,6 +17,13 @@ namespace PersonalBlog.Pages
 		[StringLength(60, MinimumLength = 3)]
 		[BindProperty(SupportsGet = true)]
 		public string SearchString { get; set; }
+
+		[BindProperty(SupportsGet = true)]
+		public int PageNum { get; set; } = 1;
+
+		public int PerPage { get; } = 6;
+		public int TotalPages { get; set; }
+
 		public BlogListModel(IBlogService blogService)
 		{
 			_blogService = blogService;
@@ -26,6 +33,11 @@ namespace PersonalBlog.Pages
 		public IEnumerable<BlogPost> Blogs { get; set; }
 		public async Task<IActionResult> OnGetAsync()
 		{
+			if (PageNum < 1)
+			{
+				PageNum = 1;
+			}
+
 			var blogList = await _blogService.GetBlogPostsAsync();
 
 			if (SearchString != null)
@@ -41,7 +53,11 @@ namespace PersonalBlog.Pages
 					);
 			}
 
-			Blogs = blogList.OrderByDescending(b => b.Published);
+			blogList = blogList.OrderByDescending(b => b.Published);
+
+			TotalPages = (blogList.Count() + PerPage - 1) / PerPage;
+
+			Blogs = blogList.OrderByDescending(b => b.Published).Skip(PerPage * (PageNum - 1)).Take(PerPage);
 			return Page();
 		}
 	}
