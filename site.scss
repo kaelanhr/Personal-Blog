@@ -17,6 +17,16 @@ h1 {
 	margin: 0;
 }
 
+.nav-background {
+	width: 100%;
+	height: $NavbarHeight;
+	background-color: $Black;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	margin-bottom: 3rem;
+}
+
 html {
 	font-size: 14px;
 	font-family: sans-serif;
@@ -30,10 +40,6 @@ li {
 	html {
 		font-size: 16px;
 	}
-}
-
-main {
-	margin-top: $NavbarHeight;
 }
 
 .container {

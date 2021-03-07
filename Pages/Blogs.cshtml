@@ -5,11 +5,15 @@
 @{
 	ViewData["Title"] = "Blogs";
 }
-
+@section Header{
 <section id="blog-list-header">
 	<h2>Kaelan Reece Blog</h2>
 	<span>Tech, Games, Modding</span>
 </section>
+<section class="nav-background">
+</section>
+}
+
 
 @if (Model.SearchString != null)
 {
