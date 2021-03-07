@@ -3,6 +3,9 @@
 
 @{
 	ViewData["Title"] = Model.Blog.Title;
+	ViewBag.Title = Model.Blog.Title;
+	ViewBag.Keywords = string.Join(",", Model.Blog.Tags);
+	ViewBag.Description = Model.Blog.Blurb;
 }
 
 <article>
