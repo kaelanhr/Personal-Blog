@@ -23,7 +23,7 @@ nav > ul > li {
 		padding-left: 1rem;
 
 		&:hover {
-			color: grey;
+			color: whitesmoke;
 		}
 	}
 }
@@ -34,4 +34,18 @@ nav > a {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+}
+
+.nav-item {
+	.active::before {
+		height: 2px;
+		width: 20px;
+		background-color: #09eff7;
+		font-weight: 700;
+		box-sizing: border-box;
+		content: "";
+		font-weight: 600;
+		position: absolute;
+		bottom: 1rem;
+	}
 }

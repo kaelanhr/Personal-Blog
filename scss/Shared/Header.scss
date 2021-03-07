@@ -3,12 +3,10 @@
 
 header {
 	// background-color: $Black;
-	box-shadow: 0 0.55rem 0.75rem rgba(0, 0, 0, 0.05);
 	position: fixed;
 	top: 0;
 	width: 100%;
 	z-index: 2;
-	opacity: 0.98;
 
 	#header-name {
 		display: flex;
@@ -30,4 +28,15 @@ header {
 			border-radius: 2rem;
 		}
 	}
+}
+
+.nav-background {
+	width: 100%;
+	height: $NavbarHeight;
+	background-color: $Black;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	box-shadow: 0 0.55rem 0.75rem rgba(0, 0, 0, 0.05);
+	opacity: 0.98;
 }
