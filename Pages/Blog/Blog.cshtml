@@ -25,7 +25,7 @@
 
 					<img src="/Images/portrait.jpg" id="user-icon" alt="User Icon" />
 					<p>
-						By Kaelan Reece | Published on @Model.Blog.Published.ToString("MMMM dd, yyyy") | @Model.Blog.Length
+						By <a class="nav-link" asp-area="" asp-page="/about">Kaelan Reece</a> | Published on @Model.Blog.Published.ToString("MMMM dd, yyyy") | @Model.Blog.Length
 						min read
 					</p>
 				</section>
@@ -45,8 +45,7 @@
 							<span class="author-title">Software Engineer</span>
 					</section>
 				</section>
-				<section>
-					<span>Tags: </span>
+				<section class="tags">
 					@foreach (var tag in Model.Blog.Tags)
 					{
 					<a href="/Blog?searchString=@HttpUtility.HtmlEncode(tag)" class="blog-tag">

@@ -76,23 +76,24 @@
 				position: absolute;
 				bottom: 0;
 				margin-bottom: 0.5rem;
-
-				.tags {
-					display: block;
-
-					a {
-						margin-left: 0.25rem;
-						text-decoration: none;
-						&:hover {
-							text-decoration: underline;
-						}
-					}
-				}
 			}
 
 			.blog-metadata {
 				font-style: italic;
 			}
+		}
+	}
+}
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	a {
+		margin-top: 0.25rem;
+		margin-left: 0.25rem;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
 		}
 	}
 }
