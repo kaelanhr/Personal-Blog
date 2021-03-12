@@ -14,7 +14,7 @@
 
 	<ItemGroup>
 		<Watch Include="Content/**/*.md" />
-		<Watch Include="scss/**" />
+		<Watch Include="scss/**/*.scss" />
 		<Watch Include="*.scss" />
 	</ItemGroup>
 </Project>

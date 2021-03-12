@@ -16,10 +16,9 @@ namespace PersonalBlog.Models
 
 		// the title of the blog post (should be unique)
 		public string Title { get; set; }
-		public string Path { get; set; }
 
-		// if applicable a link to the project pertaining to the article post.
-		public string ProjectUrl { get; set; }
+		// the url path of blog post and assets.
+		public string Path { get; set; }
 
 		// the html content of the blog post.
 		public string Content { get; set; }

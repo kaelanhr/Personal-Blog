@@ -33,22 +33,24 @@
 			<img src="/Images/Blogs/@Model.Blog.Path/header.png" class="blog-header-image" />
 
 			@Html.Raw(Model.Blog.Content)
-
 			<hr>
-
-			@if (!String.IsNullOrWhiteSpace(Model.Blog.ProjectUrl))
-			{
-				<a href="@Model.Blog.ProjectUrl">Project Url</a>
-			}
 			<section>
-				<img src="/Images/portrait.jpg" id="user-icon" alt="User Icon" />
-				<span>Kaelan Reece</span>
-				<span>Software Engineer</span>
-				<span>Tags: </span>
-				@foreach (var tag in Model.Blog.Tags)
-				{
-					<span class="blog-tag">@tag</span>
-				}
+				<section class="author-info">
+					<img src="/Images/portrait.jpg" id="user-icon-large" alt="User Icon" />
+					<section class="author-details">
+							<a class="nav-link" asp-area="" asp-page="/about">
+								<span class="author-name">Kaelan Reece</span>
+							</a>
+							<span class="author-title">Software Engineer</span>
+					</section>
+				</section>
+				<section>
+					<span>Tags: </span>
+					@foreach (var tag in Model.Blog.Tags)
+					{
+						<span class="blog-tag">@tag</span>
+					}
+					</section>
 			</section>
 		</section>
 	</section>

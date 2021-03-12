@@ -1,4 +1,5 @@
 @import "scss/Animations.scss";
+@import "scss/Colors.scss";
 
 .blog-body-container {
 	width: 100%;
@@ -12,7 +13,8 @@
 .blog-body {
 	animation: fadeIn ease 2s;
 	-webkit-animation: fadeIn ease 2s;
-	box-shadow: 0 0.25rem 0.5rem rgba(0.05, 0.05,0.05,0.15), 0 0.25rem 0.5rem rgba(0.05, 0.05,0.05,0.23);
+	box-shadow: 0 0.25rem 0.5rem rgba(0.05, 0.05, 0.05, 0.15),
+		0 0.25rem 0.5rem rgba(0.05, 0.05, 0.05, 0.23);
 	width: 80%;
 	background-color: #ffffff;
 	padding-top: 2rem;
@@ -44,4 +46,33 @@
 	width: 80%;
 	display: block;
 	margin: auto;
+}
+
+.author-name {
+	color: $Blue;
+	font-size: xx-large;
+}
+
+.author-details {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1.5rem;
+	margin-left: 1.5rem;
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.author-info {
+	display: flex;
+	margin-top: 1.5rem;
+	img {
+		height: 4rem;
+		border-radius: 2rem;
+	}
 }
