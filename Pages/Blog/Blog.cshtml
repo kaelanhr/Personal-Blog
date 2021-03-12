@@ -1,5 +1,6 @@
 @page "/Blog/{postTitle?}"
 @model PersonalBlog.Pages.BlogModel
+@using System.Web
 
 @{
 	ViewData["Title"] = Model.Blog.Title;
@@ -48,7 +49,11 @@
 					<span>Tags: </span>
 					@foreach (var tag in Model.Blog.Tags)
 					{
-						<span class="blog-tag">@tag</span>
+					<a href="/Blog?searchString=@HttpUtility.HtmlEncode(tag)" class="blog-tag">
+						<span class="blog-tag">
+							@tag
+						</span>
+					</a>
 					}
 					</section>
 			</section>
