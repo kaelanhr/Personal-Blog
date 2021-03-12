@@ -38,7 +38,6 @@ namespace PersonalBlog.Pages
 
 			Blog.Content = post.Document;
 
-
 			return Page();
 		}
 	}

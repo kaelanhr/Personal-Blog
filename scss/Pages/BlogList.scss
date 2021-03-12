@@ -96,3 +96,23 @@
 		}
 	}
 }
+
+.search-icon-wrapper {
+	position: relative;
+}
+
+.search-icon {
+	background: transparent url("/Images/Icons/search.svg") 0 0 no-repeat;
+	background-size: cover;
+	background-position: center;
+	font-weight: bold;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	border: 0;
+	height: 1rem;
+	width: 1rem;
+	position: absolute;
+	right: 0.5rem;
+	top: 0.5rem;
+}

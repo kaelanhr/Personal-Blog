@@ -21,8 +21,10 @@
 }
 
 <form class="blog-search">
-	<input type="text" asp-for="SearchString" placeholder="Search Blogs..." />
-	<input type="submit" value="Search" />
+		<input type="text" asp-for="SearchString" placeholder="Search Blogs..." />
+	<div class="search-icon-wrapper">
+		<input type="submit" class="search-icon" value="" />
+	</div>
 </form>
 
 @{
