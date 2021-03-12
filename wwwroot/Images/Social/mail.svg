@@ -1,0 +1,17 @@
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="34.576px" height="34.277px" viewBox="3.999 3.5 34.576 34.277" enable-background="new 3.999 3.5 34.576 34.277" xml:space="preserve">
+	<defs>
+		<style>
+			svg { cursor: pointer; }
+			polygon {
+				stroke: black
+			}
+			polygon:hover {
+				stroke: grey
+			}
+</style>
+	</defs>
+	<polygon fill="none" stroke="black" stroke-width="1.5" stroke-miterlimit="10" points="37.575,36.777 37.575,14.201 
+	6.609,14.201 4.999,14.201 4.999,36.777 " />
+	<polyline fill="none" stroke="black" stroke-width="1.5" stroke-miterlimit="10" points="37.575,36.777 26.5,25.52 37.575,14.201 
+	21.328,30.797 4.999,14.201 16.105,25.489 4.999,36.777 " />
+</svg>

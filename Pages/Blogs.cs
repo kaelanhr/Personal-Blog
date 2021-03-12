@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web;
 using PersonalBlog.Models;
 using PersonalBlog.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -43,7 +44,7 @@ namespace PersonalBlog.Pages
 			if (SearchString != null)
 			{
 				CultureInfo culture = new CultureInfo("en-AU");
-				var stdSearch = SearchString.Replace("+", " ");
+				var stdSearch = HttpUtility.UrlDecode(SearchString);
 
 				// whether the string is contained in either the title or in one of the tags.
 				blogList = blogList
