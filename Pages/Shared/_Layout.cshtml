@@ -3,7 +3,7 @@
 
 @{
 	var pageUrl = Context.Request.Path;
-} 
+}
 
 <head>
 	<meta charset="utf-8" />
@@ -19,7 +19,9 @@
 	<header>
 		<div class="nav-wrapper">
 			<section id="header-image">
-				<img src="/Images/WolfLogo.png" id="header-icon" />
+				<a class="nav-link @(pageUrl == "/" ? "active" : "")" asp-area="" asp-page="/Index">
+					<img src="/Images/WolfLogo.png" id="header-icon" />
+				</a>
 			</section>
 			<section id="header-name">
 				<span>Kaelan Reece</span>
