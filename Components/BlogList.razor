@@ -6,12 +6,12 @@
 		@foreach (var blog in Blogs)
 		{
 			<section class="blog-list-item">
-				<a class="nav-link text-dark" href="/BlogPost/@blog.Path">
+				<a class="nav-link text-dark" href="/Blog/@blog.Path">
 					<img src="/Images/Blogs/@blog.Path/thumbnail.png" class="thumbnail" />
 				</a>
 				<section class="blog-description">
 					<section>
-						<h2><a class="nav-link text-dark" href="/BlogPost/@blog.Path">@blog.Title</a></h2>
+						<h2><a class="nav-link text-dark" href="/Blog/@blog.Path">@blog.Title</a></h2>
 					</section>
 					<section class="blog-metadata">
 						<span>@blog.Published.ToString("dd/MM/yyyy") | @blog.Length minutes</span>
