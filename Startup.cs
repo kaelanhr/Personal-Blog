@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Routing;
 
 namespace PersonalBlog
 {
@@ -21,6 +22,12 @@ namespace PersonalBlog
 		{
 			services.AddRazorPages();
 			services.AddScoped<IBlogService, BlogService>();
+
+			services.Configure<RouteOptions>(options =>
+			{
+				options.LowercaseUrls = true;
+				options.LowercaseQueryStrings = true;
+			});
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

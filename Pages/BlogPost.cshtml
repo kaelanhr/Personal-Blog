@@ -1,4 +1,4 @@
-@page "/Blog/{postTitle?}"
+@page "/blog/{postTitle?}"
 @model PersonalBlog.Pages.BlogModel
 @using System.Web
 
@@ -48,7 +48,7 @@
 				<section class="tags">
 					@foreach (var tag in Model.Blog.Tags)
 					{
-					<a href="/Blog?searchString=@HttpUtility.HtmlEncode(tag)" class="blog-tag">
+					<a href="/blog?search=@HttpUtility.HtmlEncode(tag)" class="blog-tag">
 						<span class="blog-tag">
 							@tag
 						</span>

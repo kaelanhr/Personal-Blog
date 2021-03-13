@@ -15,22 +15,22 @@
 	</section>
 }
 
-@if (Model.SearchString != null)
+@if (Model.Search != null)
 {
 	<section class="container">
-		<h1>Results for '@Model.SearchString'</h1>
+		<h1>Results for '@Model.Search'</h1>
 	</section>
 }
 
 <form class="blog-search">
-	<input type="text" asp-for="SearchString" placeholder="Search Blogs..." />
+	<input type="text" asp-for="Search" placeholder="Search Blogs..." />
 	<div class="search-icon-wrapper">
 		<input type="submit" class="search-icon" value="" />
 	</div>
 </form>
 
 @{
-	var SearchPart = (Model.SearchString != null ? ($"&searchString={Model.SearchString}") : "");
+	var SearchPart = (Model.Search != null ? ($"&search={Model.Search}") : "");
 }
 
 @if (Model.Blogs.Count() > 0)

@@ -17,7 +17,7 @@ namespace PersonalBlog.Pages
 
 		[StringLength(60, MinimumLength = 3)]
 		[BindProperty(SupportsGet = true)]
-		public string SearchString { get; set; }
+		public string Search { get; set; }
 
 		[BindProperty(SupportsGet = true)]
 		public int PageNum { get; set; } = 1;
@@ -41,10 +41,10 @@ namespace PersonalBlog.Pages
 
 			var blogList = await _blogService.GetBlogPostsAsync();
 
-			if (SearchString != null)
+			if (Search != null)
 			{
 				CultureInfo culture = new CultureInfo("en-AU");
-				var stdSearch = HttpUtility.UrlDecode(SearchString);
+				var stdSearch = HttpUtility.UrlDecode(Search);
 
 				// whether the string is contained in either the title or in one of the tags.
 				blogList = blogList
