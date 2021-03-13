@@ -7,16 +7,21 @@
 @section Header{
 	<section id="home-header">
 		<section class="container">
-			<h2>Hi, I'm Kaelan Reece</h2>
-			<span>Software Engineer</span>
-			<span>Brisbane, Australia</span>
+			<section>
+				<img src="/Images/portrait.JPG"  class="portrait"/>
+			</section>
+			<section class="personal-details">
+				<h2>Hi, I'm Kaelan Reece</h2>
+				<span>Software Engineer</span>
+				<span>Brisbane, Australia</span>
+			</section>
 		</section>
 	</section>
 	<section class="nav-background">
 	</section>
 }
 
-<section class="container">
+<section class="container recent">
 	<h1>Recent Posts</h1>
 </section>
 <component type="typeof(Components.BlogList)" render-mode="Static" param-blogs="@Model.Blogs" />

@@ -12,5 +12,15 @@
 	}
 	.container {
 		height: 100%;
+
+		.personal-details {
+			text-align: center;
+			width: 30rem;
+			span {
+				display: block;
+				margin-top: 0.15rem;
+				font-weight: bold;
+			}
+		}
 	}
 }

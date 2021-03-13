@@ -1,6 +1,7 @@
 @import "scss/Pages/Blogs.scss";
 @import "scss/Pages/BlogList.scss";
 @import "scss/Pages/Index.scss";
+@import "scss/Pages/About.scss";
 @import "scss/Shared/Header.scss";
 @import "scss/Shared/Nav.scss";
 @import "scss/Colors.scss";
@@ -67,4 +68,14 @@ footer {
 #user-icon {
 	height: 3rem;
 	border-radius: 2rem;
+}
+
+.portrait {
+	border-radius: 50%;
+	height: 10rem;
+	width: 10rem;
+}
+
+.recent {
+	margin-top: 1rem;
 }
