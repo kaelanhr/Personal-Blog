@@ -27,6 +27,10 @@
 					<p>
 						By <a class="nav-link" asp-area="" asp-page="/about">Kaelan Reece</a> | Published on @Model.Blog.Published.ToString("MMMM dd, yyyy") | @Model.Blog.Length
 						min read
+					@if (Model.Blog.LastEdited != default && Model.Blog.LastEdited != null)
+					{
+						<span>- Edited @Model.Blog.LastEdited.ToString("MMMM dd, yyyy")</span>
+					}
 					</p>
 				</section>
 				<p>@Model.Blog.Blurb</p>
