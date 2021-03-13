@@ -22,7 +22,7 @@ namespace PersonalBlog.Pages
 		[BindProperty(SupportsGet = true)]
 		public int PageNum { get; set; } = 1;
 
-		public int PerPage { get; } = 6;
+		public int PerPage { get; } = 8;
 		public int TotalPages { get; set; }
 
 		public BlogListModel(IBlogService blogService)
@@ -53,6 +53,7 @@ namespace PersonalBlog.Pages
 					|| x.Tags.Where(t => t.IndexOf(stdSearch, System.StringComparison.OrdinalIgnoreCase) >= 0).Any()
 					);
 			}
+
 
 			blogList = blogList.OrderByDescending(b => b.Published);
 

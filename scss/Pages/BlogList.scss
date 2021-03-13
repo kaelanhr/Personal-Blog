@@ -121,3 +121,27 @@
 	right: 0.5rem;
 	top: 0.5rem;
 }
+
+.icon {
+	display: inline-block;
+	height: 1rem;
+	width: 1rem;
+}
+
+.flipped {
+	transform: rotate(180deg);
+}
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	a {
+		text-decoration: none;
+	}
+
+	span {
+		align-self: center;
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+}

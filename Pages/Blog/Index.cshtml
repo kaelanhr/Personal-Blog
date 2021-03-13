@@ -23,7 +23,7 @@
 }
 
 <form class="blog-search">
-		<input type="text" asp-for="SearchString" placeholder="Search Blogs..." />
+	<input type="text" asp-for="SearchString" placeholder="Search Blogs..." />
 	<div class="search-icon-wrapper">
 		<input type="submit" class="search-icon" value="" />
 	</div>
@@ -36,8 +36,27 @@
 @if (Model.Blogs.Count() > 0)
 {
 	<component type="typeof(Components.BlogList)" render-mode="Static" param-blogs="@Model.Blogs" />
-	<a href="?pageNum=@(Model.PageNum - 1 < 1 ? Model.PageNum : Model.PageNum - 1)@(SearchPart)">Previous</a>
-	<a href="?pageNum=@(Model.PageNum + 1 > Model.TotalPages ? Model.PageNum : Model.PageNum + 1)@(SearchPart)">Next</a>
+
+	<section class="pagination">
+		@if (Model.PageNum - 1 < 1)
+		{
+			<img src="/Images/Icons/chevron.svg" class="icon flipped"/>
+		} else {
+			<a href="?pageNum=@(Model.PageNum - 1)" class="icon">
+				<img src="/Images/Icons/chevron.svg" class="icon flipped"/>
+			</a>
+		}
+
+		<span>Page @Model.PageNum of @Model.TotalPages</span>
+		@if (Model.PageNum + 1 > Model.TotalPages)
+		{
+			<img src="/Images/Icons/chevron.svg" class="icon"/>
+		} else {
+			<a href="?pageNum=@(Model.PageNum + 1)" class="icon">
+				<img src="/Images/Icons/chevron.svg" class="icon"/>
+			</a>
+		}
+	</section>
 }
 
 else
