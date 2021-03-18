@@ -17,6 +17,7 @@ services:
     image: nginx:latest
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
+      # map certificate
     ports:
       - 80:80
       - 443:443
