@@ -52,6 +52,7 @@ namespace PersonalBlog.Helper
 		{
 			var builder = new MarkdownPipelineBuilder()
 				.UseYamlFrontMatter()
+				.UseSyntaxHighlighting()
 				.Build();
 
 			Doc.Document = Markdown.ToHtml(Input, builder);
