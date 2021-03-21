@@ -6,7 +6,7 @@
 		@foreach (var blog in Blogs)
 		{
 			<section class="blog-list-item">
-				<a class="nav-link text-dark" href="/blog/@blog.Path">
+				<a class="nav-link text-dark blog-list-thumbnail" href="/blog/@blog.Path">
 					<img src="/Images/Blogs/@blog.Path/thumbnail.png" class="thumbnail" />
 				</a>
 				<section class="blog-description">
@@ -23,7 +23,7 @@
 						<section class="tags">
 							@foreach (var tag in blog.Tags)
 							{
-								<a href="?search=@HttpUtility.HtmlEncode(tag)" class="blog-tag">
+								<a href="/blog?search=@HttpUtility.HtmlEncode(tag)" class="blog-tag">
 									<span class="blog-tag">
 										@tag
 									</span>
