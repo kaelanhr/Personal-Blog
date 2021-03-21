@@ -18,13 +18,15 @@
 <body>
 	<header>
 		<div class="nav-wrapper">
-			<section id="header-image">
-				<a class="nav-link @(pageUrl == "/" ? "active" : "")" asp-area="" asp-page="/Index">
-					<img src="/Images/WolfLogo.png" id="header-icon" />
-				</a>
-			</section>
-			<section id="header-name">
-				<span>Kaelan Reece</span>
+			<section>
+				<section id="header-image">
+					<a class="nav-link @(pageUrl == "/" ? "active" : "")" asp-area="" asp-page="/Index">
+						<img src="/Images/WolfLogo.png" id="header-icon" />
+					</a>
+				</section>
+				<section id="header-name">
+					<span>Kaelan Reece</span>
+				</section>
 			</section>
 			<nav class="navbar">
 				<ul class="navbar-nav">
@@ -49,21 +51,9 @@
 	<footer>
 		<div class="container">
 			<section class="social-links">
-				<a href="https://www.linkedin.com/in/kaelan-reece/">
-					<object type="image/svg+xml" data="/Images/Social/linkedin.svg">
-						Your browser does not support SVG
-					</object>
-				</a>
-				<a href="https://github.com/KaeIan/">
-					<object type="image/svg+xml" data="/Images/Social/github.svg">
-						Your browser does not support SVG
-					</object>
-				</a>
-				<a href="mailTo:kaelanreece@gmail.com">
-					<object type="image/svg+xml" data="/Images/Social/mail.svg">
-						Your browser does not support SVG
-					</object>
-				</a>
+				<a href="https://www.linkedin.com/in/kaelan-reece/" class="linkedin" target="__blank"></a>
+				<a href="https://github.com/KaeIan/" class="github" target="__blank"></a>
+				<a href="mailTo:kaelanreece@gmail.com" class="mail" target="__blank"></a>
 			</section>
 			<section>
 				&copy; Copyright Kaelan Reece 2021

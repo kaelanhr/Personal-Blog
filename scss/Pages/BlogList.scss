@@ -50,20 +50,33 @@
 }
 
 .blog-list {
-	display: grid;
-	grid-template-columns: 50% 50%;
+	display: flex;
 	animation: fadeIn ease 2s;
 	-webkit-animation: fadeIn ease 2s;
-	width: 80%;
+
+	@media only screen and (min-width: 1000px) {
+		width: 95%;
+	}
+	flex-wrap: wrap;
 	.blog-list-item {
-		margin-left: 2.5rem;
-		margin-top: 2.5rem;
+		@media only screen and (min-width: 1000px) {
+			flex: 40%;
+			margin-left: 2.5rem;
+			margin-top: 2.5rem;
+		}
+		height: 20rem;
+		margin-top: 1rem;
+		flex: 100%;
 		background-color: #ffffff;
-		display: grid;
-		grid-template-columns: 45% 55%;
+		display: flex;
 		box-shadow: 0 0.25rem 0.5rem rgba(0.05, 0.05, 0.05, 0.15),
 			0 0.25rem 0.5rem rgba(0.05, 0.05, 0.05, 0.23);
+
+		a.blog-list-thumbnail {
+			width: 45%;
+		}
 		.blog-description {
+			width: 55%;
 			padding-left: 1rem;
 			position: relative;
 

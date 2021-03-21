@@ -16,6 +16,9 @@ h3 {
 h1 {
 	font-size: xxx-large;
 	margin: 0;
+	@media only screen and (max-width: 1000px) {
+		font-size: x-large;
+	}
 }
 
 html {
@@ -60,7 +63,20 @@ footer {
 
 	section.social-links {
 		a {
+			height: 24px;
+			width: 24px;
+			display: inline-block;
 			text-decoration: none;
+			margin-left: 0.5rem;
+		}
+		a.linkedin {
+			background-image: url("/Images/Social/linkedin.svg");
+		}
+		a.github {
+			background-image: url("/Images/Social/github.svg");
+		}
+		a.mail {
+			background-image: url("/Images/Social/mail.svg");
 		}
 	}
 }
