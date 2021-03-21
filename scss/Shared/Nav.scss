@@ -3,6 +3,17 @@
 .nav-wrapper {
 	display: flex;
 	height: $NavbarHeight;
+
+	section {
+		display: flex;
+	}
+	@media only screen and (max-width: 1000px) {
+		display: block;
+		nav {
+			display: flex;
+			justify-content: center;
+		}
+	}
 }
 
 nav {
@@ -47,5 +58,9 @@ nav > a {
 		font-weight: 600;
 		position: absolute;
 		bottom: 1rem;
+
+		@media only screen and (max-width: 1000px) {
+			bottom: 0.5rem;
+		}
 	}
 }
