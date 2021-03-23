@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using ColorCode.Styling;
 using Markdig;
 using YamlDotNet.Core;
 using YamlDotNet.Core.Events;
@@ -52,7 +53,7 @@ namespace PersonalBlog.Helper
 		{
 			var builder = new MarkdownPipelineBuilder()
 				.UseYamlFrontMatter()
-				.UseSyntaxHighlighting()
+				.UseSyntaxHighlighting(StyleDictionary.DefaultDark)
 				.Build();
 
 			Doc.Document = Markdown.ToHtml(Input, builder);
