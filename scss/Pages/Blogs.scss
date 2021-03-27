@@ -26,6 +26,21 @@
 	padding-bottom: 2rem;
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
+
+	img, p > img {
+		height: auto;
+		max-width: 80%;
+		display: block;
+		margin: auto;
+	}
+
+	p > code {
+		background-color: $Grey-White;
+	}
+
+	div > pre {
+		padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+	}
 }
 
 .thumbnail {
