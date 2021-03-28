@@ -53,7 +53,9 @@ namespace PersonalBlog.Helper
 		{
 			var builder = new MarkdownPipelineBuilder()
 				.UseYamlFrontMatter()
+				.UseUrlRewriter(link => link.Url.Replace("Assets/", "/Images/Blogs/"))
 				.UseSyntaxHighlighting(StyleDictionary.DefaultDark)
+				.UseGenericAttributes()
 				.Build();
 
 			Doc.Document = Markdown.ToHtml(Input, builder);
