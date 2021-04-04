@@ -58,12 +58,15 @@
 	}
 
 	p > code {
-		background-color: $Grey-White;
+		background-color: #1E1E1E;
+		color: whitesmoke;
+		padding: 0.15rem;
 	}
 
 	div > pre {
 		padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 	}
+
 }
 
 .thumbnail {
