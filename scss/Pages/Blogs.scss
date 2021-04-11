@@ -45,6 +45,24 @@
 	width: 60%;
 	padding-left: 4rem;
 	padding-right: 4rem;
+	position: relative;
+
+	blockquote {
+		position: relative;
+		background-color: $White;
+		p::before {
+			background-color: $Blue;
+			position: absolute;
+			height: 100%;
+			width: 3px;
+			// left: -0.5rem;
+			left: 0rem;
+			content: '';
+		}
+		p {
+			padding-left: 0.5rem;
+		}
+	}
 
 	p > img {
 		height: auto;
@@ -58,7 +76,7 @@
 	}
 
 	p > code {
-		background-color: #1E1E1E;
+		background-color: #1e1e1e;
 		color: whitesmoke;
 		padding: 0.15rem;
 	}
@@ -66,7 +84,6 @@
 	div > pre {
 		padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 	}
-
 }
 
 .thumbnail {
