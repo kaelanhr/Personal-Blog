@@ -81,6 +81,16 @@
 			@media only screen and (min-width: 1000px) {
 				width: 45%;
 			}
+
+			div {
+				display: flex;
+				align-items: center;
+				height: 100%;
+
+				@media only screen and (max-width: 1000px) {
+					justify-content: center;
+				}
+			}
 			width: 100%;
 		}
 		.blog-description {
