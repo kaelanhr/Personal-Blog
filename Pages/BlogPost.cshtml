@@ -23,7 +23,7 @@
 				</section>
 				<section class="blog-details">
 
-					<img src="/Images/portrait.jpg" id="user-icon" alt="User Icon" />
+					<img src="/Images/portrait.jpg" id="user-icon" alt="User Icon" loading="lazy" />
 					<p>
 						By <a class="nav-link" asp-area="" asp-page="/about">Kaelan Reece</a> | Published on @Model.Blog.Published.ToString("MMMM dd, yyyy") | @Model.Blog.Length
 						min read
@@ -35,13 +35,13 @@
 				</section>
 				<p>@Model.Blog.Blurb</p>
 			</section>
-			<img src="/Images/Blogs/@Model.Blog.Path/header.png" class="blog-header-image" />
+			<img src="/Images/Blogs/@Model.Blog.Path/header.png" class="blog-header-image" loading="lazy" />
 
 			@Html.Raw(Model.Blog.Content)
 			<hr>
 			<section>
 				<section class="author-info">
-					<img src="/Images/portrait.jpg" id="user-icon-large" alt="User Icon" />
+					<img src="/Images/portrait.jpg" id="user-icon-large" alt="User Icon" loading="lazy" />
 					<section class="author-details">
 							<a class="nav-link" asp-area="" asp-page="/about">
 								<span class="author-name">Kaelan Reece</span>
