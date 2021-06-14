@@ -58,7 +58,8 @@ namespace PersonalBlog
 			{
 				OnPrepareResponse = ctx =>
 				{
-					const int durationInSeconds = 60 * 60 * 24;
+					const int cacheDays = 7;
+					const int durationInSeconds = 60 * 60 * 24 * cacheDays;
 					ctx.Context.Response.Headers[HeaderNames.CacheControl] =
 						"public,max-age=" + durationInSeconds;
 				}
