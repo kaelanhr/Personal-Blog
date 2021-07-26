@@ -54,11 +54,8 @@ namespace PersonalBlog.Pages
 					);
 			}
 
-
 			blogList = blogList.OrderByDescending(b => b.Published);
-
 			TotalPages = (blogList.Count() + PerPage - 1) / PerPage;
-
 			Blogs = blogList.OrderByDescending(b => b.Published).Skip(PerPage * (PageNum - 1)).Take(PerPage);
 			return Page();
 		}
