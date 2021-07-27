@@ -32,7 +32,7 @@
 	window.addEventListener('DOMContentLoaded', (event) => {
 		var theme = window.localStorage.getItem("theme");
 
-		@* if the theme exists update theme selector and apply class name. Otherwise default to light theme and add to local storage *@
+		@* apply local storage theme if present, otherwise set theme with defaults *@
 		if (theme) {
 			document.body.className = theme;
 			selectElement("theme", theme);
