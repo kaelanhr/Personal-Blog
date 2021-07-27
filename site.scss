@@ -30,6 +30,10 @@ p {
 	line-height: 1.75;
 }
 
+section {
+	color: var(--color-text);
+}
+
 li {
 	list-style-type: disclosure-closed;
 }
@@ -49,7 +53,7 @@ html {
 
 body {
 	margin: 0;
-	background-color: $Grey-White;
+	background-color: var(--color-page-background);
 }
 
 footer {

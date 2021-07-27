@@ -15,6 +15,32 @@
 	<meta name="keywords" content="@ViewBag.Keywords" />
 </head>
 
+<script>
+	function setTheme() {
+		var selectedTheme = document.getElementById("theme").value;
+		window.localStorage.setItem("theme", selectedTheme)
+		var a = document.body;
+		a.className = selectedTheme
+	}
+	@* selection box picks the selected theme *@
+	function selectElement(id, valueToSelect) {
+		let element = document.getElementById(id);
+		element.value = valueToSelect;
+	}
+
+	window.addEventListener('DOMContentLoaded', (event) => {
+		var theme = window.localStorage.getItem("theme");
+
+		if (theme) {
+			document.body.className = theme;
+			selectElement("theme", theme);
+		} else {
+			selectElement("theme", theme ? theme : "light");
+			setTheme();
+		}
+	});
+</script>
+
 <body>
 	<header>
 		<div class="nav-wrapper">
@@ -25,7 +51,7 @@
 					</a>
 				</section>
 				<section id="header-name">
-					<span>Kaelan Reece</span>
+					<span></span>
 				</section>
 			</section>
 			<nav class="navbar">
@@ -44,6 +70,10 @@
 		</div>
 	</header>
 	@RenderSection("Header")
+	<select name="theme" id="theme" onchange="setTheme()">
+		<option value="light">Light</option>
+		<option value="dark">Dark</option>
+	</select>
 	<main role="main">
 		@RenderBody()
 	</main>

@@ -1,1 +1,15 @@
+@import "scss/Colors.scss";
+
 $NavbarHeight: 4rem;
+
+:root {
+	--color-page-background: #{$Grey-White};
+	--color-text: #{$Black};
+	--site-owner: "Kaelan Reece";
+}
+
+.dark {
+  --color-page-background: #{$Grey-Black};
+  --color-text: #{$White};
+  --site-owner: "DarkWolf_V";
+}
