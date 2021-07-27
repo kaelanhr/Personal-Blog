@@ -16,13 +16,14 @@
 </head>
 
 <script>
+	@* add selected theme to local storage, update body with theme *@
 	function setTheme() {
 		var selectedTheme = document.getElementById("theme").value;
 		window.localStorage.setItem("theme", selectedTheme)
 		var a = document.body;
 		a.className = selectedTheme
 	}
-	@* selection box picks the selected theme *@
+	@* set theme selected item *@
 	function selectElement(id, valueToSelect) {
 		let element = document.getElementById(id);
 		element.value = valueToSelect;
@@ -31,11 +32,12 @@
 	window.addEventListener('DOMContentLoaded', (event) => {
 		var theme = window.localStorage.getItem("theme");
 
+		@* if the theme exists update theme selector and apply class name. Otherwise default to light theme and add to local storage *@
 		if (theme) {
 			document.body.className = theme;
 			selectElement("theme", theme);
 		} else {
-			selectElement("theme", theme ? theme : "light");
+			selectElement("theme", "light");
 			setTheme();
 		}
 	});
