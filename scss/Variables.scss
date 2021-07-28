@@ -5,11 +5,21 @@ $NavbarHeight: 4rem;
 :root {
 	--color-page-background: #{$Grey-White};
 	--color-text: #{$Black};
+	--color-page-background-contrast: #{$White};
+	--color-heading: #{$Blue};
+	--color-tags: #{$White-Grey};
+	--color-icon: #{$Black};
+	--color-border: #{$Light-Grey};
 	--site-owner: "Kaelan Reece";
 }
 
 .dark {
-  --color-page-background: #{$Grey-Black};
-  --color-text: #{$White};
-  --site-owner: "DarkWolf_V";
+	--color-page-background: #{$Grey-Black};
+	--color-page-background-contrast: #{$Grey-Black-Darker};
+	--color-text: #{$White};
+	--color-heading: #{$Teal};
+	--color-tags: #{$Black-Grey};
+	--color-icon: #{$White};
+	--color-border: #{$Dark-Grey};
+	--site-owner: "DarkWolf_V";
 }

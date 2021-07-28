@@ -18,10 +18,9 @@
 <script>
 	@* add selected theme to local storage, update body with theme *@
 	function setTheme() {
-		var selectedTheme = document.getElementById("theme").value;
+		let selectedTheme = document.getElementById("theme").value;
 		window.localStorage.setItem("theme", selectedTheme)
-		var a = document.body;
-		a.className = selectedTheme
+		document.body.className = selectedTheme
 	}
 	@* set theme selected item *@
 	function selectElement(id, valueToSelect) {
@@ -30,7 +29,7 @@
 	}
 
 	window.addEventListener('DOMContentLoaded', (event) => {
-		var theme = window.localStorage.getItem("theme");
+		let theme = window.localStorage.getItem("theme");
 
 		@* apply local storage theme if present, otherwise set theme with defaults *@
 		if (theme) {
@@ -38,7 +37,6 @@
 			selectElement("theme", theme);
 		} else {
 			selectElement("theme", "light");
-			setTheme();
 		}
 	});
 </script>

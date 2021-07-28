@@ -40,21 +40,17 @@
 	<section class="pagination">
 		@if (Model.PageNum - 1 < 1)
 		{
-			<img src="/Images/Icons/chevron.svg" class="icon flipped"/>
+			<div class="icon flipped"></div>
 		} else {
-			<a href="?pageNum=@(Model.PageNum - 1)" class="icon">
-				<img src="/Images/Icons/chevron.svg" class="icon flipped"/>
-			</a>
+			<a href="?pageNum=@(Model.PageNum - 1)" class="icon flipped"></a>
 		}
 
 		<span>Page @Model.PageNum of @Model.TotalPages</span>
 		@if (Model.PageNum + 1 > Model.TotalPages)
 		{
-			<img src="/Images/Icons/chevron.svg" class="icon"/>
+			<div class="icon"></div>
 		} else {
-			<a href="?pageNum=@(Model.PageNum + 1)" class="icon">
-				<img src="/Images/Icons/chevron.svg" class="icon"/>
-			</a>
+			<a href="?pageNum=@(Model.PageNum + 1)" class="icon"></a>
 		}
 	</section>
 }

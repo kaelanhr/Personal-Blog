@@ -10,7 +10,7 @@
 h1,
 h2,
 h3 {
-	color: $Blue;
+	color: var(--color-heading);
 }
 
 h1 {
@@ -70,15 +70,19 @@ footer {
 			display: inline-block;
 			text-decoration: none;
 			margin-left: 0.5rem;
+			background-color: var(--color-icon);
 		}
 		a.linkedin {
-			background-image: url("/Images/Social/linkedin.svg");
+			-webkit-mask-image: url("/Images/Social/linkedin.svg");
+			mask-image: url("/Images/Social/linkedin.svg");
 		}
 		a.github {
-			background-image: url("/Images/Social/github.svg");
+			-webkit-mask-image: url("/Images/Social/github.svg");
+			mask-image: url("/Images/Social/github.svg");
 		}
 		a.mail {
-			background-image: url("/Images/Social/mail.svg");
+			-webkit-mask-image: url("/Images/Social/mail.svg");
+			mask-image: url("/Images/Social/mail.svg");
 		}
 	}
 }
