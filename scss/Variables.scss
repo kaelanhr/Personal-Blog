@@ -1,1 +1,29 @@
+@import "scss/Colors.scss";
+
 $NavbarHeight: 4rem;
+
+:root {
+	--color-page-background: #{$Grey-White};
+	--color-text: #{$Black};
+	--color-page-background-contrast: #{$White};
+	--color-heading: #{$Blue};
+	--color-tags: #{$White-Grey};
+	--color-link: #{$LightBlue};
+	--color-icon: #{$Black};
+	--color-border: #{$Light-Grey};
+	--site-owner: "Kaelan Reece";
+	--theme-icon: url("/Images/icons/sun.svg")
+}
+
+.dark {
+	--color-page-background: #{$Grey-Black};
+	--color-page-background-contrast: #{$Grey-Black-Darker};
+	--color-text: #{$White};
+	--color-heading: #{$Teal};
+	--color-tags: #{$Black-Grey};
+	--color-link: #{$LightBlue};
+	--color-icon: #{$White};
+	--color-border: #{$Dark-Grey};
+	--site-owner: "DarkWolf_V";
+	--theme-icon: url("/Images/icons/moon.svg")
+}

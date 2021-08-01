@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="58.023px" height="101.904px" viewBox="23.708 -23.707 58.023 101.904"
+	 width="18px" height="18px" viewBox="23.708 -23.707 58.023 101.904"
 	 enable-background="new 23.708 -23.707 58.023 101.904" xml:space="preserve">
-<g id="Layer_1_1_">
-</g>
-<g id="Layer_2">
-	<polyline fill="none" stroke="#2b2b2b" stroke-width="10" stroke-miterlimit="10" points="27.244,-20.172 74.661,27.245 
-		27.244,74.661 	"/>
-</g>
+	<polyline fill="none" stroke="#2b2b2b" stroke-width="10" stroke-miterlimit="10" points="27.244,-20.172 74.661,27.245
+		27.244,74.661"/>
 </svg>

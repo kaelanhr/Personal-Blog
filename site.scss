@@ -10,7 +10,7 @@
 h1,
 h2,
 h3 {
-	color: $Blue;
+	color: var(--color-heading);
 }
 
 h1 {
@@ -21,6 +21,24 @@ h1 {
 	}
 }
 
+#theme {
+	background: var(--theme-icon);
+	height: 40px;
+	width: 40px;
+	display: block;
+	position: absolute;
+	right: 0.5rem;
+	top: 0.5rem;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+#theme-wrapper {
+	position: relative;
+	z-index: 10;
+}
+
 html {
 	font-size: 18px;
 	font-family: Verdana, sans-serif;
@@ -28,6 +46,14 @@ html {
 
 p {
 	line-height: 1.75;
+}
+
+a {
+	color: var(--color-link);
+}
+
+section {
+	color: var(--color-text);
 }
 
 li {
@@ -49,7 +75,7 @@ html {
 
 body {
 	margin: 0;
-	background-color: $Grey-White;
+	background-color: var(--color-page-background);
 }
 
 footer {
@@ -66,15 +92,19 @@ footer {
 			display: inline-block;
 			text-decoration: none;
 			margin-left: 0.5rem;
+			background-color: var(--color-icon);
 		}
 		a.linkedin {
-			background-image: url("/Images/Social/linkedin.svg");
+			-webkit-mask-image: url("/Images/Social/linkedin.svg");
+			mask-image: url("/Images/Social/linkedin.svg");
 		}
 		a.github {
-			background-image: url("/Images/Social/github.svg");
+			-webkit-mask-image: url("/Images/Social/github.svg");
+			mask-image: url("/Images/Social/github.svg");
 		}
 		a.mail {
-			background-image: url("/Images/Social/mail.svg");
+			-webkit-mask-image: url("/Images/Social/mail.svg");
+			mask-image: url("/Images/Social/mail.svg");
 		}
 	}
 }

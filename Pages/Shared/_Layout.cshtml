@@ -6,14 +6,48 @@
 }
 
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>@ViewData["Title"] | Kaelan Reece</title>
 	<link rel="stylesheet" href="~/css/site.css" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="@ViewBag.Description" />
 	<meta name="title" content="@ViewBag.Title" />
 	<meta name="keywords" content="@ViewBag.Keywords" />
+	<meta name="image" content="@ViewBag.Image" />
 </head>
+
+<script>
+	// swap the theme and add selection to local storage.
+	function setTheme() {
+		let newTheme = document.body.className == "dark" ? "light" : "dark";
+		window.localStorage.setItem("theme", newTheme);
+		document.body.className = newTheme;
+	}
+
+	// update theme if preferrence changes.
+	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+		// ignore theme updates when theme set in local storage.
+		if (window.localStorage.getItem("theme")) {
+			return;
+		}
+		const newColorScheme = e.matches ? "dark" : "light";
+		document.body.className = newColorScheme;
+	});
+
+	// set theme prioritising local storage before preferred theme.
+	window.addEventListener('DOMContentLoaded', (event) => {
+		const localStorageTheme = window.localStorage.getItem("theme");
+		let siteTheme  = "light";
+
+		if (localStorageTheme) {
+			siteTheme = localStorageTheme;
+		} else if(window.matchMedia) {
+			siteTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
+		}
+
+		document.body.className = siteTheme;
+	});
+</script>
 
 <body>
 	<header>
@@ -25,7 +59,7 @@
 					</a>
 				</section>
 				<section id="header-name">
-					<span>Kaelan Reece</span>
+					<span></span>
 				</section>
 			</section>
 			<nav class="navbar">
@@ -44,6 +78,9 @@
 		</div>
 	</header>
 	@RenderSection("Header")
+	<div id="theme-wrapper">
+		<span id="theme" onClick="setTheme()"></span>
+	</div>
 	<main role="main">
 		@RenderBody()
 	</main>

@@ -34,7 +34,7 @@
 			padding-left: 24px;
 			padding-right: 24px;
 		}
-		background-color: #ffffff;
+		background-color: var(--color-page-background-contrast);
 
 		padding-left: 0rem;
 		padding-right: 0rem;
@@ -49,7 +49,7 @@
 
 	blockquote {
 		position: relative;
-		background-color: $White;
+		background-color: var(--color-page-background-contrast);
 		p::before {
 			background-color: $Blue;
 			position: absolute;
@@ -128,7 +128,7 @@
 }
 
 .author-name {
-	color: $Blue;
+	color: var(--color-heading);
 	font-size: xx-large;
 	@media only screen and (max-width: 1000px) {
 		font-size: x-large;
