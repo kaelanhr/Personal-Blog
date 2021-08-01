@@ -16,19 +16,14 @@
 </head>
 
 <script>
-	// add selected theme to local storage, update body with theme.
+	// swap the theme and add selection to local storage.
 	function setTheme() {
-		let selectedTheme = document.getElementById("theme").value;
-		window.localStorage.setItem("theme", selectedTheme)
-		document.body.className = selectedTheme
-	}
-	// set theme selected item.
-	function selectElement(id, valueToSelect) {
-		let element = document.getElementById(id);
-		element.value = valueToSelect;
+		let newTheme = document.body.className == "dark" ? "light" : "dark";
+		window.localStorage.setItem("theme", newTheme);
+		document.body.className = newTheme;
 	}
 
-	// update theme if preferred theme changes.
+	// update theme if preferrence changes.
 	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
 		// ignore theme updates when theme set in local storage.
 		if (window.localStorage.getItem("theme")) {
@@ -36,7 +31,6 @@
 		}
 		const newColorScheme = e.matches ? "dark" : "light";
 		document.body.className = newColorScheme;
-		selectElement("theme", newColorScheme);
 	});
 
 	// set theme prioritising local storage before preferred theme.
@@ -51,7 +45,6 @@
 		}
 
 		document.body.className = siteTheme;
-		selectElement("theme", siteTheme);
 	});
 </script>
 
@@ -84,10 +77,9 @@
 		</div>
 	</header>
 	@RenderSection("Header")
-	<select name="theme" id="theme" onchange="setTheme()">
-		<option value="light">Light</option>
-		<option value="dark">Dark</option>
-	</select>
+	<div id="theme-wrapper">
+		<span id="theme" onClick="setTheme()"></span>
+	</div>
 	<main role="main">
 		@RenderBody()
 	</main>
