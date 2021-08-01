@@ -16,28 +16,42 @@
 </head>
 
 <script>
-	@* add selected theme to local storage, update body with theme *@
+	// add selected theme to local storage, update body with theme.
 	function setTheme() {
 		let selectedTheme = document.getElementById("theme").value;
 		window.localStorage.setItem("theme", selectedTheme)
 		document.body.className = selectedTheme
 	}
-	@* set theme selected item *@
+	// set theme selected item.
 	function selectElement(id, valueToSelect) {
 		let element = document.getElementById(id);
 		element.value = valueToSelect;
 	}
 
-	window.addEventListener('DOMContentLoaded', (event) => {
-		let theme = window.localStorage.getItem("theme");
-
-		@* apply local storage theme if present, otherwise set theme with defaults *@
-		if (theme) {
-			document.body.className = theme;
-			selectElement("theme", theme);
-		} else {
-			selectElement("theme", "light");
+	// update theme if preferred theme changes.
+	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+		// ignore theme updates when theme set in local storage.
+		if (window.localStorage.getItem("theme")) {
+			return;
 		}
+		const newColorScheme = e.matches ? "dark" : "light";
+		document.body.className = newColorScheme;
+		selectElement("theme", newColorScheme);
+	});
+
+	// set theme prioritising local storage before preferred theme.
+	window.addEventListener('DOMContentLoaded', (event) => {
+		const localStorageTheme = window.localStorage.getItem("theme");
+		let siteTheme  = "light";
+
+		if (localStorageTheme) {
+			siteTheme = localStorageTheme;
+		} else if(window.matchMedia) {
+			siteTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
+		}
+
+		document.body.className = siteTheme;
+		selectElement("theme", siteTheme);
 	});
 </script>
 
