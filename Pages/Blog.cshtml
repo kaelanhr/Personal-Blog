@@ -42,7 +42,7 @@
 		{
 			<div class="icon flipped"></div>
 		} else {
-			<a href="?pageNum=@(Model.PageNum - 1)" class="icon flipped"></a>
+			<a href="?pageNum=@(Model.PageNum - 1)@(SearchPart)" class="icon flipped"></a>
 		}
 
 		<span>Page @Model.PageNum of @Model.TotalPages</span>
@@ -50,7 +50,7 @@
 		{
 			<div class="icon"></div>
 		} else {
-			<a href="?pageNum=@(Model.PageNum + 1)" class="icon"></a>
+			<a href="?pageNum=@(Model.PageNum + 1)@(SearchPart)" class="icon"></a>
 		}
 	</section>
 }
