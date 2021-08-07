@@ -10,6 +10,7 @@
 	ViewBag.Keywords = string.Join(",", Model.Blog.Tags);
 	ViewBag.Description = Model.Blog.Blurb;
 	ViewBag.Image = $"/Images/Blogs/{Model.Blog.Path}/thumbnail.png";
+	ViewBag.Published  = Model.Blog.Published;
 }
 
 @section Header{
