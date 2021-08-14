@@ -39,6 +39,11 @@ h1 {
 	z-index: 1;
 }
 
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 html {
 	font-size: 18px;
 	font-family: Verdana, sans-serif;
