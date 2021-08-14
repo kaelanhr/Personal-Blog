@@ -27,6 +27,8 @@ RUN dotnet publish -c Release
 # run time
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS runtime
 WORKDIR /app
+RUN useradd -ms /bin/bash PersonalBlog && chown -R PersonalBlog /app
+USER PersonalBlog
 EXPOSE 80
 EXPOSE 443
 EXPOSE 5000/tcp
