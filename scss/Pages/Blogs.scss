@@ -64,6 +64,14 @@
 		}
 	}
 
+	p > iframe {
+		display: block;
+		margin: auto;
+		max-width: 100%;
+		width: 900px;
+		height: 505px;
+	}
+
 	p > img {
 		height: auto;
 		max-width: 80%;

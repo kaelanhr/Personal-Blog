@@ -56,6 +56,7 @@ namespace PersonalBlog.Helper
 				.UseUrlRewriter(link => link.Url.Replace("Assets/", "/Images/Blogs/"))
 				.UseSyntaxHighlighting(StyleDictionary.DefaultDark)
 				.UseGenericAttributes()
+				.UseMediaLinks()
 				.Build();
 
 			Doc.Document = Markdown.ToHtml(Input, builder);
