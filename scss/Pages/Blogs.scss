@@ -43,6 +43,7 @@
 	padding-bottom: 2rem;
 
 	width: 60%;
+	max-width: 850px;
 	padding-left: 4rem;
 	padding-right: 4rem;
 	position: relative;
@@ -84,7 +85,7 @@
 	}
 
 	p > code {
-		background-color: #1e1e1e;
+		background-color: var(--color-highlight);
 		color: whitesmoke;
 		padding: 0.15rem;
 	}
@@ -95,7 +96,7 @@
 	}
 
 	pre {
-		background-color: #1e1e1e;
+		background-color: var(--color-highlight);
 		color: #dadada;
 		padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 		overflow: scroll;
