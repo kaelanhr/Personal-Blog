@@ -16,6 +16,8 @@
 	box-shadow: 0 0.25rem 0.5rem rgba(0.05, 0.05, 0.05, 0.15),
 		0 0.25rem 0.5rem rgba(0.05, 0.05, 0.05, 0.23);
 
+	background-color: var(--color-page-background-contrast);
+
 	@media only screen and (max-width: 1000px) {
 		width: 100%;
 
@@ -34,7 +36,6 @@
 			padding-left: 24px;
 			padding-right: 24px;
 		}
-		background-color: var(--color-page-background-contrast);
 
 		padding-left: 0rem;
 		padding-right: 0rem;
@@ -42,11 +43,41 @@
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 
-	width: 60%;
+	width: 70%;
 	max-width: 850px;
 	padding-left: 4rem;
 	padding-right: 4rem;
 	position: relative;
+
+	table,
+	td,
+	th {
+		border: 1px solid #ddd;
+		border-collapse: collapse;
+	}
+	table {
+		width: 100%;
+		th {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			background-color: var(--color-zebra);
+		}
+
+		th,
+		td {
+			padding-left: 0.5rem;
+		}
+
+		tr:nth-child(even) {
+			background-color: var(--color-zebra);
+		}
+
+		@media only screen and (max-width: 1000px) {
+			overflow-x: auto;
+			display: block;
+		}
+	}
 
 	blockquote {
 		position: relative;
