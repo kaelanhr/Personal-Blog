@@ -53,6 +53,7 @@ namespace PersonalBlog.Helper
 		{
 			var builder = new MarkdownPipelineBuilder()
 				.UseYamlFrontMatter()
+				.UsePipeTables()
 				.UseUrlRewriter(link => link.Url.Replace("Assets/", "/Images/Blogs/"))
 				.UseSyntaxHighlighting(StyleDictionary.DefaultDark)
 				.UseGenericAttributes()
