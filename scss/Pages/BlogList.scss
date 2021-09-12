@@ -81,10 +81,6 @@
 			0 0.25rem 0.5rem rgba(0.05, 0.05, 0.05, 0.23);
 
 		a.blog-list-thumbnail {
-			@media only screen and (min-width: 1000px) {
-				width: 45%;
-			}
-
 			div {
 				display: flex;
 				align-items: center;
@@ -94,15 +90,14 @@
 					justify-content: center;
 				}
 			}
-			width: 100%;
 		}
 		.blog-description {
 			@media only screen and (min-width: 1000px) {
-				width: 55%;
 				margin-bottom: 0rem;
 			}
 			margin-bottom: 5rem;
 			padding-left: 1rem;
+			padding-right: 1rem;
 			position: relative;
 
 			h2 > a {
