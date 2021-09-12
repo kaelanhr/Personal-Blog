@@ -135,10 +135,10 @@
 }
 
 .thumbnail {
-	height: auto;
-	max-height: 20rem;
-	max-width: 20rem;
-	width: 100%;
+	@media only screen and (min-width: 1000px) {
+		height: 20rem;
+		width: 20rem;
+	}
 	opacity: 0.85;
 
 	@media only screen and (max-width: 1000px) {
