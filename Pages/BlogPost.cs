@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace PersonalBlog.Pages
 {
+	[ResponseCache(Duration = 60 * 60 * 12)]
 	public class BlogModel : PageModel
 	{
 		public BlogPost Blog { get; set; }

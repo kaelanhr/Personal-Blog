@@ -22,6 +22,7 @@ namespace PersonalBlog
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
+			services.AddResponseCaching();
 			services.AddRazorPages();
 			services.AddScoped<IBlogService, BlogService>();
 
@@ -67,7 +68,7 @@ namespace PersonalBlog
 
 			app.UseRouting();
 
-			app.UseAuthorization();
+			app.UseResponseCaching();
 
 			app.UseEndpoints(endpoints =>
 			{
