@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 
 namespace PersonalBlog.Pages
 {
+	[ResponseCache(Duration = 60 * 60 * 12)]
 	public class IndexModel : PageModel
 	{
 		private readonly ILogger<IndexModel> _logger;
@@ -24,6 +25,7 @@ namespace PersonalBlog.Pages
 		}
 
 		public IEnumerable<BlogPost> Blogs { get; set; }
+
 		public async Task<IActionResult> OnGetAsync()
 		{
 			Blogs = (await _blogService.GetBlogPostsAsync()).OrderByDescending(b => b.Published).Take(4);
