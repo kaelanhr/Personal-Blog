@@ -11,7 +11,7 @@ using Microsoft.Extensions.Logging;
 
 namespace PersonalBlog.Pages
 {
-	[ResponseCache(Duration = 60 * 60 * 12)]
+	[ResponseCache(Duration = 60 * 60 * 3)]
 	public class IndexModel : PageModel
 	{
 		private readonly ILogger<IndexModel> _logger;

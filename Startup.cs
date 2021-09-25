@@ -23,7 +23,9 @@ namespace PersonalBlog
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddResponseCaching();
+			services.AddMemoryCache();
 			services.AddRazorPages();
+			services.AddSingleton<IMemoryCacheService, MemoryCacheService>();
 			services.AddScoped<IBlogService, BlogService>();
 
 			services.Configure<RouteOptions>(options =>

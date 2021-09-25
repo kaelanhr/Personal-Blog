@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace PersonalBlog.Pages
 {
-	[ResponseCache(Duration = 60 * 60 * 12, VaryByQueryKeys = new[] { "Search", "PageNum" })]
+	[ResponseCache(Duration = 60 * 60 * 3, VaryByQueryKeys = new[] { "Search", "PageNum" })]
 	public class BlogListModel : PageModel
 	{
 		private readonly IBlogService _blogService;

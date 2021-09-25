@@ -5,7 +5,7 @@ using PersonalBlog.Helper;
 
 namespace PersonalBlog.Pages
 {
-	[ResponseCache(Duration = 60 * 60 * 12)]
+	[ResponseCache(Duration = 60 * 60 * 3)]
 	public class AboutModel : PageModel
 	{
 		public string AboutContent;
