@@ -93,7 +93,9 @@
 	</header>
 	@RenderSection("Header")
 	<div id="theme-wrapper">
-		<span id="theme" onClick="setTheme()"></span>
+		<div id="theme-button">
+			<span id="theme" onClick="setTheme()"></span>
+		</div>
 	</div>
 	<main role="main">
 		@RenderBody()

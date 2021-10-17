@@ -13,6 +13,7 @@ $NavbarHeight: 4rem;
 	--color-icon: #{$Black};
 	--color-border: #{$Light-Grey};
 	--color-highlight: #{$Black-Alternate};
+	--color-highlight-icon: #{$White};
 	--site-owner: "Kaelan Reece";
 	--theme-icon: url("/Images/Icons/sun.svg")
 }
@@ -28,6 +29,7 @@ $NavbarHeight: 4rem;
 	--color-icon: #{$White};
 	--color-border: #{$Dark-Grey};
 	--color-highlight: #{$Black-Highlight};
+	--color-highlight-icon: #{$Black};
 	--site-owner: "DarkWolf_V";
 	--theme-icon: url("/Images/Icons/moon.svg")
 }

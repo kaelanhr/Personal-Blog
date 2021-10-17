@@ -22,21 +22,47 @@ h1 {
 }
 
 #theme {
-	background: var(--theme-icon);
-	height: 40px;
-	width: 40px;
+	-webkit-mask-image: var(--theme-icon);
+	mask-image: var(--theme-icon);
+	background-color: var(--color-icon);
+	height: 35px;
+	width: 35px;
 	display: block;
-	position: absolute;
-	right: 0.5rem;
-	top: 0.5rem;
-	&:hover {
-		cursor: pointer;
-	}
+	align-items: center;
 }
 
 #theme-wrapper {
 	position: relative;
 	z-index: 1;
+}
+
+#theme-button {
+	position: absolute;
+	right: 0.5rem;
+	top: 0.5rem;
+
+	border-radius: 50%;
+	// border: solid 1px #555;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+	-o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+	height: 45px;
+	width: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: var(--color-page-background-contrast);
+
+	&:hover {
+		background-color: var(--color-text);
+
+		#theme {
+			cursor: pointer;
+			background-color: var(--color-highlight-icon);
+		}
+	}
 }
 
 .flex {
